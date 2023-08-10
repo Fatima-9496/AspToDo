@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for the banner container */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            background: url('../FinalTodo/Images/task.jpg') center/cover no-repeat;
+            text-align: center;
+            color: black;
+        }
+
+        /* Styles for the text */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Styles for the button */
+        .button {
+            display: inline-block;
+            background-color: white;
+            color: #007bff;
+            border: 2px solid #007bff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .button:hover {
+                background-color: #007bff;
+                color: white;
+            }
+    </style>
+    
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Welcome</h1>
+            <p>Click the button to manage your Tasks</p>
+            <a class="button" asp-area="" asp-controller="UserTask" asp-action="Index">Tasks</a>
+        </div>
+    </div>
+</body>
+</html>
